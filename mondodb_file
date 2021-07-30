@@ -1,0 +1,15 @@
+db.collection.find({
+  "houses.neighborhood": "Uptown",
+  
+},
+{
+  name: 1,
+  houses: {
+    $elemMatch: {
+      neighborhood: "Uptown",
+      
+    },
+    
+  },
+  
+})
